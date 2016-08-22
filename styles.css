@@ -51,6 +51,11 @@ html, body {
 
 .component-info-window h4 {
   margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.component-info-window h4:first-child {
+  margin-top: 0;
 }
 
 .component-info-window p {
