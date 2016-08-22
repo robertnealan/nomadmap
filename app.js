@@ -2,6 +2,7 @@
 // Developer Console, https://console.developers.google.com
 var CLIENT_ID = '855877358-81ei5rtn5sc1kauncj2kut6ffhjl7hbd.apps.googleusercontent.com';
 var SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"];
+var API_KEY = 'AIzaSyB061FXESp_bD9uzFHZZrvbfMIfBJfljX8';
 
 var map;
 
@@ -39,8 +40,8 @@ function addMarker(location, map, title, content) {
  * Load Sheets API client library.
  */
 function loadSheetsApi() {
-  var discoveryUrl =
-      'https://sheets.googleapis.com/$discovery/rest?version=v4&key=AIzaSyB061FXESp_bD9uzFHZZrvbfMIfBJfljX8';
+  gapi.client.setApiKey(API_KEY);
+  var discoveryUrl = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
   gapi.client.load(discoveryUrl).then(loadMarkers);
 }
 
