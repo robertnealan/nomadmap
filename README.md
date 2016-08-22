@@ -35,7 +35,3 @@ Currently we're just using [speedtest.net](http://speedtest.net) to verify uploa
 ###Internet Quality
 
 This should be a subjective rating of either `excellent`, `good`, `poor`, or `unusable` in regards to how usable the internet actually was. Anybody who has worked in cafes knows that fast speeds doesn't mean it's actually usable when the router crashes every 5 minutes.
-
-##Other
-
-Thanks to Jordan Kerr for nearly instantly jumping onboard with the idea after I shared my Koh Tao "coworking" map, and to Koh Tao for having such inconsistent internet that I felt compelled to document it.
