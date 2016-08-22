@@ -38,4 +38,4 @@ This should be a subjective rating of either `excellent`, `good`, `poor`, or `un
 
 ##Other
 
-Thanks to Jordan Kerr for nearly instantly jumping onboard with the idea after I shared my Koh Tao "coworking" map, and to Koh Tao for having such inconsistent internet that I felt compared to document it.
+Thanks to Jordan Kerr for nearly instantly jumping onboard with the idea after I shared my Koh Tao "coworking" map, and to Koh Tao for having such inconsistent internet that I felt compelled to document it.

@@ -44,7 +44,7 @@ function checkAuth() {
       'client_id': CLIENT_ID,
       'scope': SCOPES.join(' '),
       'immediate': true
-    }, loadSheetsApi);
+    }, handleAuthResult);
 }
 
 /**
