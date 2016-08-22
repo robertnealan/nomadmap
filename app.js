@@ -118,11 +118,14 @@ function loadMarkers() {
                 content += '<h4>' + labels[k] + '</h4>';
                 content += '<p>' + row[k] + '</p>';
             }
-            console.log(content);
             addMarker(gCoords, map, title, content);
           }  
         }
       }
+
+      var el = document.querySelectorAll('.js-component-loading')[0];
+      console.log(el);
+      el.style.display = 'none';
     } else {
       alert('Welp, that\'s an error.');
     }
