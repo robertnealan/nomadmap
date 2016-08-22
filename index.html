@@ -2,31 +2,28 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-    </style>
-
+    
+    <link rel="stylesheet" href="styles.css" type="text/css" />
     <script type="text/javascript" src="app.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
   </head>
   <body>
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Google Sheets API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
-      </button>
-    </div>
-    <div id="output"></div>
+    <div class="component-sidebar">
+      <div class="sidebar__header">
+        <h1 class="sidebar__title">NomadMap.io</h1>
+        <h2 class="sidebar__subtitle">Local Coffee, Wifi, and Co-Working Information for Digital Nomads</h2>
+      </div>
+      <div class="sidebar__body">
+        <h3>About</h3>
+        <p>NomadMap is a community-driven application looking to answer the question, “Where can I work today?” This iteration is currently an MVP proof-of-concept and should be considered a work-in-progress.</p>
 
-    <div id="map"></div>
+        <h3>Getting Involved</h3>
+        <p><a href="">See the guide</a> if you'd like to contribute your own favorite places to work.</p>
+        <p>If you're interested in getting involved in development work, send an email to <a href="mailto:rob@atomidesign.com">rob@atomidesign.com</a> or put in a PR on <a href="https://github.com/robertnealan/nomadmap" target="_blank">Github</a></p>
+      </div>
+    </div>
+
+    <div id="map" class="component-map"></div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB061FXESp_bD9uzFHZZrvbfMIfBJfljX8&callback=initMap"
     async defer></script>

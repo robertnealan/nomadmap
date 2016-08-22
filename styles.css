@@ -1,0 +1,75 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.component-map {
+  height: 100%;
+}
+
+.component-sidebar {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  left: 1rem;
+  top: 8rem;
+  width: 30rem;
+  z-index: 2;
+}
+
+.sidebar__header {
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem;
+}
+
+.sidebar__body {
+  padding: 1.5rem;
+}
+
+.sidebar__title {
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.sidebar__subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.component-info-window h4 {
+  margin-bottom: 0;
+}
+
+.component-info-window p {
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+h3:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

@@ -14,12 +14,24 @@ function initMap() {
 }
 
 // Adds a marker to the map.
-function addMarker(location, map) {
+function addMarker(location, map, title, content) {
   // Add the marker at the clicked location, and add the next-available label
   // from the array of alphabetical characters.
+
+  content = '<div class="component-info-window">' + content + '</div>'
+
+  var infowindow = new google.maps.InfoWindow({
+    content: content
+  });
+
   var marker = new google.maps.Marker({
     position: location,
-    map: map
+    map: map,
+    title: title
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
 }
 
@@ -32,7 +44,7 @@ function checkAuth() {
       'client_id': CLIENT_ID,
       'scope': SCOPES.join(' '),
       'immediate': true
-    }, handleAuthResult);
+    }, loadSheetsApi);
 }
 
 /**
@@ -84,6 +96,7 @@ function loadMarkers() {
     range: 'Koh Samui',
   }).then(function(response) {
     var range = response.result;
+
     if (range.values.length > 0) {
       for (i = 0; i < range.values.length; i++) {
         var row = range.values[i];
@@ -98,10 +111,15 @@ function loadMarkers() {
             var coords = gpsLoc.split(',');
             var coordsString = '{ "lat":' + coords[0] + ', "lng":' + coords[1] + '}';
             var gCoords = JSON.parse(coordsString);
+            var title = row[0];
+            var content = '';
 
-
-            console.log(gCoords);
-            addMarker(gCoords, map);
+            for (var k = 0; k < row.length; k++) {
+                content += '<h4>' + labels[k] + '</h4>';
+                content += '<p>' + row[k] + '</p>';
+            }
+            console.log(content);
+            addMarker(gCoords, map, title, content);
           }  
         }
       }
